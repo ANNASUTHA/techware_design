@@ -21,10 +21,6 @@ class StoryItem extends StatelessWidget {
       height: 68,
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
-    /*    gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: storyBorderColor)*/
       ),
               child: Padding(
         padding: const EdgeInsets.all(3.0),
@@ -37,19 +33,19 @@ class StoryItem extends StatelessWidget {
               width: 2
             ),
             shape: BoxShape.circle,
-            image: DecorationImage(image: 
+            image: DecorationImage(image:
             AssetImage(img!,),fit: BoxFit.cover)
           ),
         ),
       ),
           ),
-          SizedBox(height: 8,),
+        const SizedBox(height: 8,),
           SizedBox(
       width: 70,
-      child: 
+      child:
       Text(name!,
       overflow: TextOverflow.ellipsis,
-      style: TextStyle(
+      style:const TextStyle(
           color: Colors.black
       ),),
           )

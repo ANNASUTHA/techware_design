@@ -6,6 +6,8 @@ import '../theme/colors.dart';
 import 'home_page.dart';
 
 class RootApp extends StatefulWidget {
+  const RootApp({Key? key}) : super(key: key);
+
   @override
   _RootAppState createState() => _RootAppState();
 }
@@ -29,7 +31,7 @@ class _RootAppState extends State<RootApp> {
                 padding: const EdgeInsets.all(16.0),
                 child: SvgPicture.asset("assets/images/search_active_icon.svg",width: 30,color: Colors.black,),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Container(
                 height: 40,
                   width: 40,
@@ -54,22 +56,28 @@ class _RootAppState extends State<RootApp> {
   Widget getBody(){
     List<Widget> pages = [
       HomePage(),
-      SearchPage(),
-      Center(
+      const Center(
+        child: Text("Search Page",style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: black
+        ),),
+      ),
+      const Center(
           child: Text("Upload Page",style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: black
           ),),
       ),
-      Center(
+      const Center(
           child: Text("Activity Page",style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: black
           ),),
       ),
-      Center(
+      const Center(
           child: Text("Account Page",style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
